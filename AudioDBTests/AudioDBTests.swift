@@ -31,10 +31,5 @@ class AudioDBTests: XCTestCase {
     self.measure {
       // Put the code you want to measure the time of here.
     }
-  }
-  
-  func testIntegrationWillFail() throws {
-    XCTAssertTrue(1 == 2)
-  }
-  
+  }  
 }
