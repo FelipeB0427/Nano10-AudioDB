@@ -16,4 +16,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
      
     - name: Build and Test
-      run: xcodebuild test -project TodoList.xcodeproj -scheme "AudioDB" -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2'
+      run: xcodebuild test -project AudioDB.xcodeproj -scheme "AudioDB" -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.2'
