@@ -44,6 +44,7 @@
 		1533C7BB2885E29D00053A0B /* AudioDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1533C7BF2885E29D00053A0B /* AudioDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBUITests.swift; sourceTree = "<group>"; };
 		1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1533C7CE2887400000053A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		1533C7982885E29900053A0B = {
 			isa = PBXGroup;
 			children = (
+				1533C7CE2887400000053A0B /* README.md */,
 				1533C7A32885E29A00053A0B /* AudioDB */,
 				1533C7B42885E29D00053A0B /* AudioDBTests */,
 				1533C7BE2885E29D00053A0B /* AudioDBUITests */,
