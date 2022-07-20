@@ -13,6 +13,7 @@ class HomeUITests: XCTestCase {
     var app: XCUIApplication!
     override func setUpWithError() throws {
         app = XCUIApplication()
+        XCUIDevice.shared.orientation = .portrait
         continueAfterFailure = false
         app.launch()
     }
