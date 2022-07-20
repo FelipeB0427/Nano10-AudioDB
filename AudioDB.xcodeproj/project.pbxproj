@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		1533C7A12885E29A00053A0B /* AudioDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1533C7A42885E29A00053A0B /* AudioDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBApp.swift; sourceTree = "<group>"; };
-		1533C7A62885E29A00053A0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1533C7A62885E29A00053A0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		1533C7A82885E29C00053A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1533C7AB2885E29C00053A0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1533C7B12885E29D00053A0B /* AudioDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +45,7 @@
 		1533C7BF2885E29D00053A0B /* AudioDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBUITests.swift; sourceTree = "<group>"; };
 		1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1533C7CE2887400000053A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1533C7D428887A6F00053A0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +97,12 @@
 		1533C7A32885E29A00053A0B /* AudioDB */ = {
 			isa = PBXGroup;
 			children = (
-				1533C7A42885E29A00053A0B /* AudioDBApp.swift */,
-				1533C7A62885E29A00053A0B /* ContentView.swift */,
-				1533C7A82885E29C00053A0B /* Assets.xcassets */,
+				1533C7D628887CBE00053A0B /* App */,
+				1533C7D528887A8C00053A0B /* Utilities */,
+				1533C7D328887A5B00053A0B /* Screen */,
+				1533C7D228887A5100053A0B /* Model */,
+				1533C7D128887A4C00053A0B /* ViewModel */,
+				1533C7D028887A4700053A0B /* View */,
 				1533C7AA2885E29C00053A0B /* Preview Content */,
 			);
 			path = AudioDB;
@@ -127,6 +131,52 @@
 				1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */,
 			);
 			path = AudioDBUITests;
+			sourceTree = "<group>";
+		};
+		1533C7D028887A4700053A0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1533C7D128887A4C00053A0B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1533C7D228887A5100053A0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1533C7D328887A5B00053A0B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1533C7A62885E29A00053A0B /* ContentView.swift */,
+				1533C7D428887A6F00053A0B /* ContentView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1533C7D528887A8C00053A0B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1533C7D628887CBE00053A0B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1533C7A42885E29A00053A0B /* AudioDBApp.swift */,
+				1533C7A82885E29C00053A0B /* Assets.xcassets */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
