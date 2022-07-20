@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533C7A42885E29A00053A0B /* AudioDBApp.swift */; };
-		1533C7A72885E29A00053A0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533C7A62885E29A00053A0B /* ContentView.swift */; };
 		1533C7A92885E29C00053A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1533C7A82885E29C00053A0B /* Assets.xcassets */; };
 		1533C7AC2885E29C00053A0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1533C7AB2885E29C00053A0B /* Preview Assets.xcassets */; };
 		1533C7B62885E29D00053A0B /* AudioDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533C7B52885E29D00053A0B /* AudioDBTests.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		1533C7A12885E29A00053A0B /* AudioDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1533C7A42885E29A00053A0B /* AudioDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBApp.swift; sourceTree = "<group>"; };
-		1533C7A62885E29A00053A0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		1533C7A82885E29C00053A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1533C7AB2885E29C00053A0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1533C7B12885E29D00053A0B /* AudioDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +155,6 @@
 		1533C7D328887A5B00053A0B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				1533C7A62885E29A00053A0B /* ContentView.swift */,
 				1533C7D428887A6F00053A0B /* ContentView.swift */,
 			);
 			path = Screen;
@@ -330,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1533C7A72885E29A00053A0B /* ContentView.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
