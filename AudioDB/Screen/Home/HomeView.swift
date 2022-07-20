@@ -9,7 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Hello, there!")
+        VStack {
+            Text("Hello, there!")
+                .accessibilityIdentifier("welcome")
+            Text("Choose what you want to do now:")
+                .accessibilityIdentifier("textChoose")
+        }
     }
 }
 
