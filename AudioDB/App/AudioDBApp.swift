@@ -11,7 +11,8 @@ import SwiftUI
 struct AudioDBApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            HomeView()
         }
     }
 }
