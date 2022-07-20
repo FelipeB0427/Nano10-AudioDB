@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  AudioDB
 //
-//  Created by Felipe Brigagão de Almeida on 18/07/22.
+//  Created by Gustavo da Silva Braghin on 20/07/22.
 //
 
 import SwiftUI
