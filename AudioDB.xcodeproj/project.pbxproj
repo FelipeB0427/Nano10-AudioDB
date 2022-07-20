@@ -96,10 +96,10 @@
 		1533C7A32885E29A00053A0B /* AudioDB */ = {
 			isa = PBXGroup;
 			children = (
+				1533C7D928887FF300053A0B /* Model */,
 				1533C7D628887CBE00053A0B /* App */,
 				1533C7D528887A8C00053A0B /* Utilities */,
 				1533C7D328887A5B00053A0B /* Screen */,
-				1533C7D228887A5100053A0B /* Model */,
 				1533C7D128887A4C00053A0B /* ViewModel */,
 				1533C7D028887A4700053A0B /* View */,
 				1533C7AA2885E29C00053A0B /* Preview Content */,
@@ -146,13 +146,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1533C7D228887A5100053A0B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1533C7D328887A5B00053A0B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +168,13 @@
 				1533C7A82885E29C00053A0B /* Assets.xcassets */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		1533C7D928887FF300053A0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
