@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Cardable {
+protocol Cardable: Identifiable {
     var image: String { get }
     var text: String { get }
 }

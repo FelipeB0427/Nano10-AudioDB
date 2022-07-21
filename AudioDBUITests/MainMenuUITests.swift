@@ -22,12 +22,11 @@ class HomeUITests: XCTestCase {
 //        device.orientation = .portrait
         continueAfterFailure = false
         app.launch()
-        print(app)
+        print(app as Any)
     }
 
     override func tearDownWithError() throws {
-        app    = nil
-//        device = nil
+        app = nil
     }
     // MARK: Welcome
     func testWelcomeText() {
@@ -79,6 +78,25 @@ class HomeUITests: XCTestCase {
         XCTAssertTrue(label.exists, "")
         XCTAssertEqual(label.label, text, "")
     }
+    func testFavoritesList() {
+        // GIVEN
+        let table = app.scrollViews.matching(identifier: "homeFavoritesList")
+        // THEN
+        XCTAssertTrue(table.element.exists)
+    }
     // MARK: Welcome
-    // MARK: Welcome
+    func testCategoriesText() {
+        // GIVEN
+        let text = "Categories"
+        let label = app.staticTexts["labelCategories"]
+        // THEN
+        XCTAssertTrue(label.exists, "")
+        XCTAssertEqual(label.label, text, "")
+    }
+    func testCategoriesList() {
+        // GIVEN
+        let table = app.scrollViews.matching(identifier: "homeCategoriesList")
+        // THEN
+        XCTAssertTrue(table.element.exists)
+    }
 }

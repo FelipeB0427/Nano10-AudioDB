@@ -12,7 +12,7 @@ struct AudioDBApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            HomeView()
+            HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
         }
     }
 }
