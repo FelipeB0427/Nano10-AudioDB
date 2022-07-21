@@ -11,6 +11,7 @@ struct HomeView: View {
     let mainMenuOptions: [MainMenuOptionsModel]
     let favorites: [MainMenuOptionsModel]
     let categories: [MainMenuOptionsModel]
+    let ksajbdkabsldjablsd = CGFloat(200.0)
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
@@ -29,16 +30,16 @@ struct HomeView: View {
                         .font(.system(.largeTitle, design: .rounded))
                     HStack {
                         NavigationLink(destination: PlaceholderView()) {
-                            MainMenuButton(sfSymbol: mainMenuOptions[0].image,
+                            MainMenuButtonView(sfSymbol: mainMenuOptions[0].image,
                                            text: mainMenuOptions[0].text,
-                                           id: mainMenuOptions[0].id)
+                                               id: mainMenuOptions[0].id, width: ksajbdkabsldjablsd)
                                 .font(.largeTitle)
                             .frame(width: 200, height: 250)
                         }
                         NavigationLink(destination: PlaceholderView()) {
-                            MainMenuButton(sfSymbol: mainMenuOptions[1].image,
+                            MainMenuButtonView(sfSymbol: mainMenuOptions[1].image,
                                            text: mainMenuOptions[1].text,
-                                           id: mainMenuOptions[1].id)
+                                           id: mainMenuOptions[1].id, width: ksajbdkabsldjablsd)
                             .font(.largeTitle)
                             .frame(width: 200, height: 250)
                         }
@@ -55,7 +56,10 @@ struct HomeView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(favorites, id: \.id) { fav in
-                                MainMenuButton(sfSymbol: fav.image, text: fav.text, id: fav.id)
+                                MainMenuButtonView(sfSymbol: fav.image,
+                                                   text: fav.text,
+                                                   id: fav.id,
+                                                   width: ksajbdkabsldjablsd)
                                     .font(.largeTitle)
                                     .frame(width: 200, height: 200)
                             }
@@ -73,7 +77,10 @@ struct HomeView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(categories, id: \.id) { fav in
-                                MainMenuButton(sfSymbol: fav.image, text: fav.text, id: fav.id)
+                                MainMenuButtonView(sfSymbol: fav.image,
+                                                   text: fav.text, id:
+                                                   fav.id,
+                                                   width: ksajbdkabsldjablsd)
                                     .font(.largeTitle)
                                     .frame(width: 200, height: 200)
                             }
@@ -90,26 +97,5 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(mainMenuOptions: favoritesMemes, favorites: mainMenuOptions, categories: categoriesMemes)
 //            .en
-    }
-}
-
-struct MainMenuButton: View {
-    let sfSymbol: String
-    let text: String
-    let id: String
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 30)
-                .accessibilityIdentifier("\(id)Background")
-                .foregroundStyle(.ultraThickMaterial)
-            VStack {
-                Image(systemName: sfSymbol)
-                    .accessibilityIdentifier("\(id)Emoji")
-                .foregroundColor(.red)
-                Text(text)
-                    .accessibilityIdentifier("\(id)Label")
-                    .foregroundColor(.red)
-            }
-        }
     }
 }
