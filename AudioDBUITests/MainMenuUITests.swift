@@ -12,10 +12,6 @@ import SwiftUI
 class HomeUITests: XCTestCase {
     var app: XCUIApplication!
 //    var device: XCUIDevice!
-//    var stub = [
-//        MainMenuOptionsModel(id: "buttonMeme", image: "face.smiling.fill", text: "Memes"),
-//        MainMenuOptionsModel(id: "buttonGenerate", image: "face.smiling.fill", text: "Generate")
-//    ]
     override func setUpWithError() throws {
         app = XCUIApplication()
 //        device = XCUIDevice.shared
@@ -92,9 +88,16 @@ class HomeUITests: XCTestCase {
         // THEN
         XCTAssertTrue(table.element.exists)
     }
-    
     // MARK: Navigation
     func testNavigation_ToListView() {
-        
+        // GIVEN
+        let titleListView = app.staticTexts["titleListView"]
+        let card = app.scrollViews.otherElements.buttons["buttonMemeEmoji-buttonMemeLabel-buttonMemeBackground"]
+        // THEN
+        XCTAssertFalse(titleListView.exists, "The title in ListView shouldn't exist at this moment")
+        card.tap()
+        // WHEN
+        let exists = titleListView.waitForExistence(timeout: 3.0)
+        XCTAssertTrue(exists)
     }
 }

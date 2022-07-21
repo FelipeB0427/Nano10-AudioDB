@@ -26,14 +26,14 @@ struct HomeView: View {
                         .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
                         Spacer()
-                        NavigationLink(destination: PlaceholderView()) {
+                        NavigationLink(destination: Text("titleListView")) {
                             Cardfy(sfSymbol: mainMenuOptions[0].image,
                                    text: mainMenuOptions[0].text,
                                    id: mainMenuOptions[0].id, width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         Spacer()
-                        NavigationLink(destination: PlaceholderView()) {
+                        NavigationLink(destination: Text("titleListView")) {
                             Cardfy(sfSymbol: mainMenuOptions[1].image,
                                    text: mainMenuOptions[1].text,
                                    id: mainMenuOptions[1].id, width: width * percentageForMainMenu)
