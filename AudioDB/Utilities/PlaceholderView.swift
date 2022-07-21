@@ -30,7 +30,7 @@ struct PlaceholderView_Previews: PreviewProvider {
     }
 }
 
-fileprivate let messagesForPlaceholderView: [String] = [
+private let messagesForPlaceholderView: [String] = [
     "I am a work in progress.\n Barbra Streisand",
     "🚦 Nothing to see here...🚦",
     "Come back later 🍃",
