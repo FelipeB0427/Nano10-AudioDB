@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct AudioDBApp: App {
-    var body: some Scene {
+    @StateObject private var memeManager = MemeManager()
+    
+    @SceneBuilder var body: some Scene {
         WindowGroup {
+            NavigationView {
 //            ContentView()
-            HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
+                HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
+            }
+            .environmentObject(memeManager)
         }
     }
 }
