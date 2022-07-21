@@ -16,10 +16,10 @@
 		669E622B28887F0900C32613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669E622A28887F0900C32613 /* ContentView.swift */; };
 		6F99D0A12888B43300858A4D /* MainMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A02888B43300858A4D /* MainMenuUITests.swift */; };
 		6F99D0A32888B69F00858A4D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A22888B69F00858A4D /* HomeView.swift */; };
-		6F99D0A52888F57D00858A4D /* MainMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A42888F57D00858A4D /* MainMenuButtonView.swift */; };
 		6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */; };
 		6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A82888F7D100858A4D /* Cardable.swift */; };
 		6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AA2889973C00858A4D /* PlaceholderView.swift */; };
+		6F99D0AD2889C8C300858A4D /* MainMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AC2889C8C300858A4D /* MainMenuButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		669E622A28887F0900C32613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F99D0A02888B43300858A4D /* MainMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuUITests.swift; sourceTree = "<group>"; };
 		6F99D0A22888B69F00858A4D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		6F99D0A42888F57D00858A4D /* MainMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuButtonView.swift; path = "../../../../../Dropbox (DeveloperAcademy-BR)/MainMenuButtonView.swift"; sourceTree = "<group>"; };
 		6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuOptionsModel.swift; sourceTree = "<group>"; };
 		6F99D0A82888F7D100858A4D /* Cardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardable.swift; sourceTree = "<group>"; };
 		6F99D0AA2889973C00858A4D /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		6F99D0AC2889C8C300858A4D /* MainMenuButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 		1533C7D028887A4700053A0B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6F99D0A42888F57D00858A4D /* MainMenuButtonView.swift */,
+				6F99D0AC2889C8C300858A4D /* MainMenuButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,12 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F99D0A52888F57D00858A4D /* MainMenuButtonView.swift in Sources */,
 				6F99D0A32888B69F00858A4D /* HomeView.swift in Sources */,
 				669E622B28887F0900C32613 /* ContentView.swift in Sources */,
 				6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */,
 				6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */,
 				6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */,
+				6F99D0AD2889C8C300858A4D /* MainMenuButtonView.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
