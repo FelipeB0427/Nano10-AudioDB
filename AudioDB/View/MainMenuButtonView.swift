@@ -28,7 +28,7 @@ struct MainMenuButtonView: View {
             }
         }.overlay(
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
-                .stroke(.yellow, lineWidth: 5)
+                .stroke(Color.teste, lineWidth: 5)
         )
     }
 }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 extension Color {
-    public static var primaryColor: UIColor {
-        return UIColor(named: "primaryColor")!
+    public static var primaryColor: Color {
+        return Color("primaryColor")
     }
-    public static var backgroundColor: UIColor {
-        return UIColor(named: "backgroundColor")!
+    public static var backgroundColor: Color {
+        return Color("backgroundColor")
     }
-    public static var textColor: UIColor {
-        return UIColor(named: "textColor")!
+    public static var textColor: Color {
+        return Color("textColor")
     }
 }
