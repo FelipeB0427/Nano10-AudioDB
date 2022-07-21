@@ -28,18 +28,10 @@ class HomeUITests: XCTestCase {
     override func tearDownWithError() throws {
         app = nil
     }
-    // MARK: Welcome
-    func testWelcomeText() {
-        // GIVEN
-        let text = app.staticTexts["welcome"]
-        // THEN
-        XCTAssertTrue(text.exists, "The Welcome text doesn't exists")
-        XCTAssertEqual(text.label, "Hello, there!", "The Welcome text doesn't have the 'Hello, there!' message")
-    }
     // MARK: Main Menu
     func testChooseText() {
         // GIVEN
-        let text = XCUIApplication().staticTexts["textChoose"]
+        let text = app.scrollViews.otherElements.staticTexts["textChoose"]
         // THEN
         XCTAssertTrue(text.exists, "The Choose text doesn't exists")
         XCTAssertEqual(text.label, "Choose what you want to do now:",

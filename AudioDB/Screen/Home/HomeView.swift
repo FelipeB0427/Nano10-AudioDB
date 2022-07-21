@@ -16,13 +16,13 @@ struct HomeView: View {
             ScrollView(.vertical) {
                 VStack {
                     // MARK: Welcome
-//                    HStack {
-//                        Text("Hello, there!")
-//                            .accessibilityIdentifier("welcome")
-//                            .font(.system(.title, design: .rounded))
-//                        Spacer()
-//                    }
-//                    .padding()
+                    HStack {
+                        Text("Hello, there!")
+                            .accessibilityIdentifier("welcome")
+                            .font(.system(.title, design: .rounded))
+                        Spacer()
+                    }
+                    .padding()
                     // MARK: Choose
                     Text("Choose what you want to do now:")
                         .accessibilityIdentifier("textChoose")
@@ -89,6 +89,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(mainMenuOptions: favoritesMemes, favorites: mainMenuOptions, categories: categoriesMemes)
+//            .en
     }
 }
 
@@ -100,6 +101,7 @@ struct MainMenuButton: View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
                 .accessibilityIdentifier("\(id)Background")
+                .foregroundStyle(.ultraThickMaterial)
             VStack {
                 Image(systemName: sfSymbol)
                     .accessibilityIdentifier("\(id)Emoji")
