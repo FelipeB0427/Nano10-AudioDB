@@ -17,18 +17,18 @@ struct Cardfy: View {
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
                 .accessibilityIdentifier("\(id)Background")
                 .foregroundColor(.black)
-                .frame(width: width, height: width * 1.2)
+                .frame(width: width, height: width * Constants.sizes.proportionHeightForCards)
             VStack {
                 // Image
                 Image(systemName: sfSymbol)
                     .accessibilityIdentifier("\(id)Emoji")
-                    .foregroundColor(.primaryColor)
+                    .foregroundColor(.white)
                     .font(.system(size: width * 0.558824))
                 // Label for the Card
                 Text(text)
                     .accessibilityIdentifier("\(id)Label")
-                    .foregroundColor(.primaryColor)
-                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .font(Constants.texts.secondaryText)
             }
         }.overlay(
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
@@ -44,7 +44,6 @@ struct MainMenuButtonView_Previews: PreviewProvider {
                 .preferredColorScheme(.light)
             Cardfy(sfSymbol: "face.smiling.fill", text: "Blabla", id: "TextID", width: 200.0)
                 .preferredColorScheme(.dark)
-            
         }
         .previewInterfaceOrientation(.portrait)
     }

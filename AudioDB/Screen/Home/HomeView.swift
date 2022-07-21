@@ -11,7 +11,9 @@ struct HomeView: View {
     let mainMenuOptions: [MainMenuOptionsModel]
     let favorites: [MainMenuOptionsModel]
     let categories: [MainMenuOptionsModel]
-    let tempWidth = CGFloat(150.0)
+    private let width = Constants.sizes.screenWidth
+    private let percentageForMainMenu = CGFloat(0.397196)
+    private let percentageForLists = CGFloat(0.317757)
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
@@ -20,40 +22,41 @@ struct HomeView: View {
                     Text("Choose what you want to do now:")
                         .accessibilityIdentifier("textChoose")
                         .font(.system(.largeTitle, design: .rounded))
+                        .padding(.top, Constants.sizes.largeSpace)
+                        .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
+                        Spacer()
                         NavigationLink(destination: PlaceholderView()) {
                             Cardfy(sfSymbol: mainMenuOptions[0].image,
-                                           text: mainMenuOptions[0].text,
-                                               id: mainMenuOptions[0].id, width: tempWidth)
-                                .font(.largeTitle)
-                            .frame(width: tempWidth, height: 250)
+                                   text: mainMenuOptions[0].text,
+                                   id: mainMenuOptions[0].id, width: width * percentageForMainMenu)
+                            .font(.largeTitle)
                         }
+                        Spacer()
                         NavigationLink(destination: PlaceholderView()) {
                             Cardfy(sfSymbol: mainMenuOptions[1].image,
-                                           text: mainMenuOptions[1].text,
-                                           id: mainMenuOptions[1].id, width: tempWidth)
+                                   text: mainMenuOptions[1].text,
+                                   id: mainMenuOptions[1].id, width: width * percentageForMainMenu)
                             .font(.largeTitle)
-                            .frame(width: tempWidth, height: 250)
                         }
-                        .navigationTitle("Home")
-                    }.padding()
+                        Spacer()
+                    }
                     // MARK: Favorites
                     HStack {
                         Text("Favorites")
                             .accessibilityIdentifier("labelFavorites")
-                        .font(.system(.title, design: .rounded))
+                            .font(Constants.texts.secondaryText)
                         Spacer()
                     }
-                    .padding()
+                    .padding(.top, Constants.sizes.mediumSpace)
+                    .padding(.leading, Constants.sizes.mediumSpace)
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(favorites, id: \.id) { fav in
                                 Cardfy(sfSymbol: fav.image,
-                                                   text: fav.text,
-                                                   id: fav.id,
-                                                   width: tempWidth)
-                                    .font(.largeTitle)
-                                    .frame(width: tempWidth, height: tempWidth)
+                                       text: fav.text,
+                                       id: fav.id,
+                                       width: width * percentageForLists)
                             }
                         }
                     }
@@ -62,26 +65,27 @@ struct HomeView: View {
                     HStack {
                         Text("Categories")
                             .accessibilityIdentifier("labelCategories")
-                        .font(.system(.title, design: .rounded))
+                            .font(Constants.texts.secondaryText)
                         Spacer()
                     }
-                    .padding()
+                    .padding(.top, Constants.sizes.mediumSpace)
+                    .padding(.leading, Constants.sizes.mediumSpace)
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(categories, id: \.id) { fav in
-                                Cardfy(sfSymbol: fav.image,
-                                                   text: fav.text, id:
-                                                   fav.id,
-                                                   width: tempWidth)
-                                    .font(.largeTitle)
-                                    .frame(width: tempWidth, height: tempWidth)
+                            ForEach(categories, id: \.id) { cat in
+                                Cardfy(sfSymbol: cat.image,
+                                       text: cat.text,
+                                       id: cat.id,
+                                       width: width * percentageForLists)
                             }
                         }
                     }
                     .accessibilityIdentifier("homeCategoriesList")
                 }
             }
+            .navigationTitle("Home")
             .background(Color.backgroundColor)
+            .background(Color.textColor)
         }
     }
 }
@@ -89,6 +93,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(mainMenuOptions: favoritesMemes, favorites: mainMenuOptions, categories: categoriesMemes)
-//            .en
+            .preferredColorScheme(.light)
     }
 }
