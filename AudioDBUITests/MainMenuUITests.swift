@@ -27,6 +27,7 @@ class HomeUITests: XCTestCase {
 
     override func tearDownWithError() throws {
         app = nil
+//        device = nil
     }
     // MARK: Main Menu
     func testChooseText() {
@@ -90,5 +91,10 @@ class HomeUITests: XCTestCase {
         let table = app.scrollViews.matching(identifier: "homeCategoriesList")
         // THEN
         XCTAssertTrue(table.element.exists)
+    }
+    
+    // MARK: Navigation
+    func testNavigation_ToListView() {
+        
     }
 }
