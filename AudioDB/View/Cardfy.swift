@@ -1,5 +1,5 @@
 //
-//  MainMenuButtonView.swift
+//  Cardfy.swift
 //  AudioDB
 //
 //  Created by Luiz Araujo on 20/07/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainMenuButtonView: View {
+struct Cardfy: View {
     let sfSymbol: String
     let text: String
     let id: String
@@ -16,19 +16,23 @@ struct MainMenuButtonView: View {
         ZStack {
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
                 .accessibilityIdentifier("\(id)Background")
-                .foregroundStyle(.ultraThickMaterial)
-                .frame(width: width, height: width * 1.3)
+                .foregroundColor(.black)
+                .frame(width: width, height: width * 1.2)
             VStack {
+                // Image
                 Image(systemName: sfSymbol)
                     .accessibilityIdentifier("\(id)Emoji")
-                .foregroundColor(.red)
+                    .foregroundColor(.primaryColor)
+                    .font(.system(size: width * 0.558824))
+                // Label for the Card
                 Text(text)
                     .accessibilityIdentifier("\(id)Label")
-                    .foregroundColor(.red)
+                    .foregroundColor(.primaryColor)
+                    .font(.largeTitle)
             }
         }.overlay(
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
-                .stroke(Color.teste, lineWidth: 5)
+                .stroke(Color.primaryColor, lineWidth: Constants.sizes.linedWidth)
         )
     }
 }
@@ -36,10 +40,12 @@ struct MainMenuButtonView: View {
 struct MainMenuButtonView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainMenuButtonView(sfSymbol: "face.smiling.fill", text: "Blabla", id: "TextID", width: 200.0)
+            Cardfy(sfSymbol: "face.smiling.fill", text: "Blabla", id: "TextID", width: 200.0)
                 .preferredColorScheme(.light)
-            MainMenuButtonView(sfSymbol: "face.smiling.fill", text: "Blabla", id: "TextID", width: 200.0)
+            Cardfy(sfSymbol: "face.smiling.fill", text: "Blabla", id: "TextID", width: 200.0)
                 .preferredColorScheme(.dark)
+            
         }
+        .previewInterfaceOrientation(.portrait)
     }
 }

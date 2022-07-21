@@ -11,5 +11,6 @@ struct Constants {
     static let sizes = ConstantsSizes()
     struct ConstantsSizes {
         let cornerRadius = CGFloat(30)
+        let linedWidth = CGFloat(5)
     }
 }
