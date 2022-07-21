@@ -12,7 +12,8 @@ struct AudioDBApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
+//            HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
+            MemeListView()
         }
     }
 }
