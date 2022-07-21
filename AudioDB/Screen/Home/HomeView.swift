@@ -15,11 +15,17 @@ struct HomeView: View {
         ScrollView(.vertical) {
             VStack {
                 // MARK: Welcom
-                Text("Hello, there!")
-                    .accessibilityIdentifier("welcome")
+                HStack {
+                    Text("Hello, there!")
+                        .accessibilityIdentifier("welcome")
+                        .font(.system(.title, design: .rounded))
+                    Spacer()
+                }
+                .padding()
                 // MARK: Choose
                 Text("Choose what you want to do now:")
                     .accessibilityIdentifier("textChoose")
+                    .font(.system(.largeTitle, design: .rounded))
                 HStack {
                     MainMenuButton(sfSymbol: mainMenuOptions[0].image,
                                    text: mainMenuOptions[0].text,
@@ -33,8 +39,13 @@ struct HomeView: View {
                         .frame(width: 200, height: 250)
                 }.padding()
                 // MARK: Favorites
-                Text("Favorites")
-                    .accessibilityIdentifier("labelFavorites")
+                HStack {
+                    Text("Favorites")
+                        .accessibilityIdentifier("labelFavorites")
+                    .font(.system(.title, design: .rounded))
+                    Spacer()
+                }
+                .padding()
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(favorites, id: \.id) { fav in
@@ -46,8 +57,13 @@ struct HomeView: View {
                 }
                 .accessibilityIdentifier("homeFavoritesList")
                 // MARK: Categories
-                Text("Categories")
-                    .accessibilityIdentifier("labelCategories")
+                HStack {
+                    Text("Categories")
+                        .accessibilityIdentifier("labelCategories")
+                    .font(.system(.title, design: .rounded))
+                    Spacer()
+                }
+                .padding()
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(categories, id: \.id) { fav in

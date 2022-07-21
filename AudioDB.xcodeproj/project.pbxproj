@@ -19,6 +19,7 @@
 		6F99D0A52888F57D00858A4D /* MainMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A42888F57D00858A4D /* MainMenuButtonView.swift */; };
 		6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */; };
 		6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A82888F7D100858A4D /* Cardable.swift */; };
+		6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AA2889973C00858A4D /* PlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6F99D0A42888F57D00858A4D /* MainMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuButtonView.swift; path = "../../../../../Dropbox (DeveloperAcademy-BR)/MainMenuButtonView.swift"; sourceTree = "<group>"; };
 		6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuOptionsModel.swift; sourceTree = "<group>"; };
 		6F99D0A82888F7D100858A4D /* Cardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardable.swift; sourceTree = "<group>"; };
+		6F99D0AA2889973C00858A4D /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		1533C7D528887A8C00053A0B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6F99D0AA2889973C00858A4D /* PlaceholderView.swift */,
 				6F99D0A82888F7D100858A4D /* Cardable.swift */,
 			);
 			path = Utilities;
@@ -356,6 +359,7 @@
 				669E622B28887F0900C32613 /* ContentView.swift in Sources */,
 				6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */,
 				6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */,
+				6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
