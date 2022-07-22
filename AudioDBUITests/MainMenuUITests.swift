@@ -36,27 +36,17 @@ class HomeUITests: XCTestCase {
     }
     func testMemesButton() {
         // GIVEN
-        let text: String = "Memes"
-        let sfSymbol: String = "face.smiling.fill"
-        let label  = app.staticTexts["buttonMemeLabel"]
-        let image  = app.images["buttonMemeEmoji"]
+        let elementsQuery = app.scrollViews.otherElements
+        let memes = elementsQuery.buttons["navButtonMemes"]
         // THEN
-        XCTAssertTrue(label.exists, "Main Menu doesn't have the Memes button label")
-        XCTAssertTrue(image.exists, "Main Menu doesn't have the Memes button emoji")
-        XCTAssertEqual(label.label, text, "")
-        XCTAssertEqual(image.label, sfSymbol, "")
+        XCTAssertTrue(memes.exists, "Main Menu doesn't have the Memes button")
     }
     func testGenerateButton() {
         // GIVEN
-        let text: String = "Generate"
-        let sfSymbol: String = "face.smiling.fill"
-        let label  = app.staticTexts["buttonGenerateLabel"]
-        let image  = app.images["buttonGenerateEmoji"]
+        let elementsQuery = app.scrollViews.otherElements
+        let generate = elementsQuery.buttons["navButtonGenerate"]
         // THEN
-        XCTAssertTrue(label.exists, "Main Menu doesn't have the Memes button label")
-        XCTAssertTrue(image.exists, "Main Menu doesn't have the Memes button emoji")
-        XCTAssertEqual(label.label, text, "")
-        XCTAssertEqual(image.label, sfSymbol, "")
+        XCTAssertTrue(generate.exists, "Main Menu doesn't have the Generate Memes button label")
     }
     // MARK: Favorites
     func testFavoritesText() {
@@ -92,7 +82,8 @@ class HomeUITests: XCTestCase {
     func testNavigation_ToListView() {
         // GIVEN
         let titleListView = app.staticTexts["titleListView"]
-        let card = app.scrollViews.otherElements.buttons["buttonMemeEmoji-buttonMemeLabel-buttonMemeBackground"]
+        let elementsQuery = app.scrollViews.otherElements
+        let card = elementsQuery.buttons["navButtonMemes"]
         // THEN
         XCTAssertFalse(titleListView.exists, "The title in ListView shouldn't exist at this moment")
         card.tap()

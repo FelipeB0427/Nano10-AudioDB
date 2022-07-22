@@ -33,15 +33,17 @@ struct HomeView: View {
                         .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
                         Spacer()
-                        NavigationLink(destination: Text("titleListView")) {
+                        NavigationLink(destination: Text("titleListView").accessibilityIdentifier("titleListView")) {
                             Cardfy(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
+                        .accessibilityIdentifier("navButtonMemes")
                         Spacer()
                         NavigationLink(destination: Text("titleListView")) {
                             Cardfy(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
+                        .accessibilityIdentifier("navButtonGenerate")
                         Spacer()
                     }
                     // MARK: Favorites
