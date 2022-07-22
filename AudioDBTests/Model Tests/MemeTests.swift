@@ -19,19 +19,32 @@ class MemeTests: XCTestCase {
     }
 
     func testInit() {
-        // GIVEN
-        let meme: Meme
-        let isFavorite = false
-        let url = URL(string: "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png")!
-        let title = "Google"
         // WHEN
-        meme = Meme(isFavorite: isFavorite,
-                    imageURL: url,
-                    title: title)
+        let meme = Meme(isFavorite: memeStub.isFavorite,
+                    imageURL: memeStub.imageURL,
+                    title: memeStub.title)
         // THEN
         XCTAssertNotNil(meme, "The class couldn't be initialized.")
-        XCTAssertEqual(meme.isFavorite, isFavorite, "")
-        XCTAssertEqual(meme.imageURL, url, "")
-        XCTAssertEqual(meme.title, title, "")
+        XCTAssertEqual(meme.isFavorite, memeStub.isFavorite, "")
+        XCTAssertEqual(meme.imageURL, memeStub.imageURL, "")
+        XCTAssertEqual(meme.title, memeStub.title, "")
+    }
+    func testEquatable_ReturnsTrue() {
+        let meme = Meme(isFavorite: memeStub.isFavorite,
+                         imageURL: memeStub.imageURL,
+                         title: memeStub.title)
+        // THEN
+        XCTAssertEqual(memeStub, meme)
+    }
+    func testEquatable_ReturnsFalse() {
+        // GIVEN
+        let isFavorite = true
+        let url = URL(string: "https://www.google.com.br/images/branding/googlelogo/2x/1googlelogo_color_272x92dp.png")!
+        let title = "Google1"
+        let meme = Meme(isFavorite: isFavorite,
+                         imageURL: url,
+                         title: title)
+        // THEN
+        XCTAssertNotEqual(meme, memeStub)
     }
 }
