@@ -18,33 +18,33 @@ struct HomeView: View {
             ScrollView(.vertical) {
                 VStack {
                     // MARK: Welcome
-                    HStack {
-                        Text("Hello, there!")
-                            .accessibilityIdentifier("welcome")
-                            .font(.system(.title, design: .rounded))
-                        Spacer()
-                    }
-                    .background(.red)
-//                    // MARK: Choose
+//                    HStack {
+//                        Text("Hello, there!")
+//                            .accessibilityIdentifier("welcome")
+//                            .font(.system(.title, design: .rounded))
+//                        Spacer()
+//                    }
+//                    .background(.red)
+                    // MARK: Choose
                     Text("Choose what you want to do now:")
                         .accessibilityIdentifier("textChoose")
                         .font(.system(.largeTitle, design: .rounded))
                         .padding(.top, Constants.sizes.largeSpace)
                         .padding(.leading, Constants.sizes.mediumSpace)
-                    NavigationView {
-                        HStack {
-                            Spacer()
-                            NavigationLink(destination: Text("titleListView")) {
-                                Cardfy(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
-                                .font(.largeTitle)
-                            }
-                            Spacer()
-                            NavigationLink(destination: Text("titleListView")) {
-                                Cardfy(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
-                                .font(.largeTitle)
-                            }
-                            Spacer()
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: Text("titleListView").accessibilityIdentifier("titleListView")) {
+                            Cardfy(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
+                            .font(.largeTitle)
                         }
+                        .accessibilityIdentifier("navButtonMemes")
+                        Spacer()
+                        NavigationLink(destination: Text("titleListView")) {
+                            Cardfy(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
+                            .font(.largeTitle)
+                        }
+                        .accessibilityIdentifier("navButtonGenerate")
+                        Spacer()
                     }
                     // MARK: Favorites
                     HStack {
