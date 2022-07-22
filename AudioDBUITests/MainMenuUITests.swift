@@ -30,9 +30,7 @@ class HomeUITests: XCTestCase {
         // GIVEN
         let text = app.scrollViews.otherElements.staticTexts["textChoose"]
         // THEN
-        XCTAssertTrue(text.exists, "The Choose text doesn't exists")
-        XCTAssertEqual(text.label, "Choose what you want to do now:",
-                       "The Choose text doesn't have the 'Choose what you want to do now:' message")
+        XCTAssertEqual(text.label, "Choose what you want to do now:")
     }
     func testMemesButton() {
         // GIVEN

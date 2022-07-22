@@ -1,13 +1,13 @@
 //
-//  Cardfy.swift
+//  CarMenu.swift
 //  AudioDB
 //
-//  Created by Luiz Araujo on 20/07/22.
+//  Created by Luiz Araujo on 22/07/22.
 //
 
 import SwiftUI
 
-struct Cardfy: View {
+struct CarMenu: View {
     let memeData: MainMenuOptionsModel
     let width: CGFloat
     var body: some View {
@@ -15,7 +15,7 @@ struct Cardfy: View {
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
                 .accessibilityIdentifier("\(memeData.id)Background")
                 .foregroundColor(.black)
-                .frame(width: width, height: width * Constants.sizes.proportionHeightForCards)
+                .frame(idealWidth: width * 0.9, idealHeight: width * Constants.sizes.proportionHeightForCards)
             VStack {
                 // Image
                 Image(systemName: memeData.image)
@@ -35,12 +35,12 @@ struct Cardfy: View {
     }
 }
 
-struct MainMenuButtonView_Previews: PreviewProvider {
+struct CarMenuView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Cardfy(memeData: mainMenuOptions[0], width: 200.0)
+            CarMenu(memeData: mainMenuOptions[0], width: 200.0)
                 .preferredColorScheme(.light)
-            Cardfy(memeData: mainMenuOptions[0], width: 200.0)
+            CarMenu(memeData: mainMenuOptions[0], width: 200.0)
                 .preferredColorScheme(.dark)
         }
         .previewInterfaceOrientation(.portrait)

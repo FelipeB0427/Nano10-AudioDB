@@ -34,13 +34,13 @@ struct HomeView: View {
                     HStack {
                         Spacer()
                         NavigationLink(destination: Text("titleListView").accessibilityIdentifier("titleListView")) {
-                            Cardfy(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
+                            CarMenu(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonMemes")
                         Spacer()
                         NavigationLink(destination: Text("titleListView")) {
-                            Cardfy(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
+                            CarMenu(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonGenerate")
@@ -58,7 +58,7 @@ struct HomeView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(favorites, id: \.id) { fav in
-                                Cardfy(memeData: fav, width: width * percentageForLists)
+                                CardMemes(memeData: fav, width: width * percentageForLists)
                             }
                         }
                     }
@@ -75,7 +75,7 @@ struct HomeView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(categories, id: \.id) { cat in
-                                Cardfy(memeData: cat, width: width * percentageForLists)
+                                CardMemes(memeData: cat, width: width * percentageForLists)
                             }
                         }
                     }
