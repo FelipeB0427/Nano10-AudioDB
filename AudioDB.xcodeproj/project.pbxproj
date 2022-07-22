@@ -14,6 +14,19 @@
 		1533C7C02885E29D00053A0B /* AudioDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533C7BF2885E29D00053A0B /* AudioDBUITests.swift */; };
 		1533C7C22885E29D00053A0B /* AudioDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */; };
 		669E622B28887F0900C32613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669E622A28887F0900C32613 /* ContentView.swift */; };
+		6F8E89C9288A0A8200C5697C /* MemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E89C8288A0A8100C5697C /* MemeManager.swift */; };
+		6F8E89CB288A175400C5697C /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E89CA288A175400C5697C /* Meme.swift */; };
+		6F8E89D0288A188C00C5697C /* MemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E89CF288A188C00C5697C /* MemeTests.swift */; };
+		6F8E89D2288A1FE200C5697C /* MemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E89D1288A1FE200C5697C /* MemeManagerTests.swift */; };
+		6F8E89D6288A213F00C5697C /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E89D5288A213F00C5697C /* Stubs.swift */; };
+		6F99D0A12888B43300858A4D /* MainMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A02888B43300858A4D /* MainMenuUITests.swift */; };
+		6F99D0A32888B69F00858A4D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A22888B69F00858A4D /* HomeView.swift */; };
+		6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */; };
+		6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0A82888F7D100858A4D /* Cardable.swift */; };
+		6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AA2889973C00858A4D /* PlaceholderView.swift */; };
+		6F99D0AD2889C8C300858A4D /* Cardfy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AC2889C8C300858A4D /* Cardfy.swift */; };
+		6F99D0AF2889CDA700858A4D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AE2889CDA700858A4D /* Contants.swift */; };
+		6F99D0B12889CE8600858A4D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0B02889CE8600858A4D /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,19 @@
 		1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1533C7CE2887400000053A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		669E622A28887F0900C32613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F8E89C8288A0A8100C5697C /* MemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeManager.swift; sourceTree = "<group>"; };
+		6F8E89CA288A175400C5697C /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		6F8E89CF288A188C00C5697C /* MemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTests.swift; sourceTree = "<group>"; };
+		6F8E89D1288A1FE200C5697C /* MemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeManagerTests.swift; sourceTree = "<group>"; };
+		6F8E89D5288A213F00C5697C /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		6F99D0A02888B43300858A4D /* MainMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuUITests.swift; sourceTree = "<group>"; };
+		6F99D0A22888B69F00858A4D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuOptionsModel.swift; sourceTree = "<group>"; };
+		6F99D0A82888F7D100858A4D /* Cardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardable.swift; sourceTree = "<group>"; };
+		6F99D0AA2889973C00858A4D /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		6F99D0AC2889C8C300858A4D /* Cardfy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cardfy.swift; sourceTree = "<group>"; };
+		6F99D0AE2889CDA700858A4D /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		6F99D0B02889CE8600858A4D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +144,9 @@
 		1533C7B42885E29D00053A0B /* AudioDBTests */ = {
 			isa = PBXGroup;
 			children = (
+				6F8E89D4288A211A00C5697C /* Helpers */,
+				6F8E89D3288A1FED00C5697C /* ViewModel Tests */,
+				6F8E89CC288A184300C5697C /* Model Tests */,
 				1533C7B52885E29D00053A0B /* AudioDBTests.swift */,
 			);
 			path = AudioDBTests;
@@ -128,6 +157,7 @@
 			children = (
 				1533C7BF2885E29D00053A0B /* AudioDBUITests.swift */,
 				1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */,
+				6F99D0A02888B43300858A4D /* MainMenuUITests.swift */,
 			);
 			path = AudioDBUITests;
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 		1533C7D028887A4700053A0B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F99D0AC2889C8C300858A4D /* Cardfy.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +173,7 @@
 		1533C7D128887A4C00053A0B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6F8E89C8288A0A8100C5697C /* MemeManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +181,7 @@
 		1533C7D328887A5B00053A0B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6F99D09F2888B3DB00858A4D /* Home */,
 				669E622A28887F0900C32613 /* ContentView.swift */,
 			);
 			path = Screen;
@@ -157,6 +190,10 @@
 		1533C7D528887A8C00053A0B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6F99D0AA2889973C00858A4D /* PlaceholderView.swift */,
+				6F99D0A82888F7D100858A4D /* Cardable.swift */,
+				6F99D0AE2889CDA700858A4D /* Contants.swift */,
+				6F99D0B02889CE8600858A4D /* Color+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -173,8 +210,42 @@
 		1533C7D928887FF300053A0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F99D0A62888F79800858A4D /* MainMenuOptionsModel.swift */,
+				6F8E89CA288A175400C5697C /* Meme.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6F8E89CC288A184300C5697C /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6F8E89CF288A188C00C5697C /* MemeTests.swift */,
+			);
+			path = "Model Tests";
+			sourceTree = "<group>";
+		};
+		6F8E89D3288A1FED00C5697C /* ViewModel Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6F8E89D1288A1FE200C5697C /* MemeManagerTests.swift */,
+			);
+			path = "ViewModel Tests";
+			sourceTree = "<group>";
+		};
+		6F8E89D4288A211A00C5697C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F8E89D5288A213F00C5697C /* Stubs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6F99D09F2888B3DB00858A4D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6F99D0A22888B69F00858A4D /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +399,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F99D0A32888B69F00858A4D /* HomeView.swift in Sources */,
+				6F99D0B12889CE8600858A4D /* Color+Extension.swift in Sources */,
 				669E622B28887F0900C32613 /* ContentView.swift in Sources */,
+				6F99D0A92888F7D100858A4D /* Cardable.swift in Sources */,
+				6F99D0AF2889CDA700858A4D /* Contants.swift in Sources */,
+				6F8E89C9288A0A8200C5697C /* MemeManager.swift in Sources */,
+				6F99D0A72888F79800858A4D /* MainMenuOptionsModel.swift in Sources */,
+				6F8E89CB288A175400C5697C /* Meme.swift in Sources */,
+				6F99D0AB2889973C00858A4D /* PlaceholderView.swift in Sources */,
+				6F99D0AD2889C8C300858A4D /* Cardfy.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1533C7B62885E29D00053A0B /* AudioDBTests.swift in Sources */,
+				6F8E89D2288A1FE200C5697C /* MemeManagerTests.swift in Sources */,
+				6F8E89D0288A188C00C5697C /* MemeTests.swift in Sources */,
+				6F8E89D6288A213F00C5697C /* Stubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +430,7 @@
 			files = (
 				1533C7C02885E29D00053A0B /* AudioDBUITests.swift in Sources */,
 				1533C7C22885E29D00053A0B /* AudioDBUITestsLaunchTests.swift in Sources */,
+				6F99D0A12888B43300858A4D /* MainMenuUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +579,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,6 +611,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
