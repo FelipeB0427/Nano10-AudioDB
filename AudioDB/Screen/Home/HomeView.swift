@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var memeManager: MemeManager
     let mainMenuOptions: [MainMenuOptionsModel]
-    let favorites: [MainMenuOptionsModel]
+    
     let categories: [MainMenuOptionsModel]
     private let width = Constants.sizes.screenWidth
     private let percentageForMainMenu = CGFloat(0.397196)
@@ -57,7 +58,7 @@ struct HomeView: View {
                     .padding(.leading, Constants.sizes.mediumSpace)
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(favorites, id: \.id) { fav in
+                            ForEach(memeManager.memes, id: \.id) { fav in
                                 CardMemes(memeData: fav, width: width * percentageForLists)
                             }
                         }
@@ -72,15 +73,18 @@ struct HomeView: View {
                     }
                     .padding(.top, Constants.sizes.mediumSpace)
                     .padding(.leading, Constants.sizes.mediumSpace)
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(categories, id: \.id) { cat in
-                                CardMemes(memeData: cat, width: width * percentageForLists)
-                            }
-                        }
-                    }
-                    .accessibilityIdentifier("homeCategoriesList")
+//                    ScrollView(.horizontal) {
+//                        HStack {
+//                            ForEach(categories, id: \.id) { cat in
+//                                CardMemes(memeData: cat, width: width * percentageForLists)
+//                            }
+//                        }
+//                    }
+//                    .accessibilityIdentifier("homeCategoriesList")
                 }
+            }
+            .onAppear {
+                Task { await memeManager.fetchAllMemes() }
             }
             .background(Color.backgroundColor)
             .background(Color.textColor)
@@ -89,7 +93,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(mainMenuOptions: favoritesMemes, favorites: mainMenuOptions, categories: categoriesMemes)
+        HomeView(mainMenuOptions: favoritesMemes, categories: categoriesMemes)
             .preferredColorScheme(.light)
     }
 }

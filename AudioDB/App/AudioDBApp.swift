@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct AudioDBApp: App {
-    @StateObject private var memeManager = MemeManager(favorites: [], categories: [])
+    @StateObject private var memeManager = MemeManager()
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
 //            ContentView()
-                HomeView(mainMenuOptions: mainMenuOptions, favorites: favoritesMemes, categories: categoriesMemes)
+                HomeView(mainMenuOptions: mainMenuOptions, categories: categoriesMemes)
                     .navigationTitle(Text("MemesDB"))
             }
             .navigationViewStyle(StackNavigationViewStyle())

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardMemes: View {
-    let memeData: MainMenuOptionsModel
+    let memeData: Meme
     let width: CGFloat
     var body: some View {
         ZStack {
@@ -16,9 +16,9 @@ struct CardMemes: View {
             .accessibilityIdentifier("\(memeData.id)Background")
             .foregroundColor(.black)
             .frame(minWidth: width * 0.5, maxWidth: width, minHeight: width * 0.5, maxHeight: width)
-        VStack {
+        LazyVStack {
             // Image
-                AsyncImage(url: URL(string: memeData.image),
+                AsyncImage(url: memeData.url,
                             content: { image in
                                 image.resizable()
                                      .aspectRatio(contentMode: .fit)
@@ -31,11 +31,10 @@ struct CardMemes: View {
                     .accessibilityIdentifier("\(memeData.id)Emoji")
             }
             // Label for the Card
-            Text(memeData.text)
-                .accessibilityIdentifier("\(memeData.id)Label")
-                .foregroundColor(.white)
-                .font(Constants.texts.secondaryText)
-            
+//            Text(memeData.name)
+//                .accessibilityIdentifier("\(memeData.id)Label")
+//                .foregroundColor(.white)
+//                .font(Constants.texts.secondaryText)
         }.overlay(
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
                 .stroke(Color.primaryColor, lineWidth: Constants.sizes.linedWidth)
@@ -43,14 +42,14 @@ struct CardMemes: View {
     }
 }
 
-struct CardMemesView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            CardMemes(memeData: mainMenuOptions[0], width: 200.0)
-                .preferredColorScheme(.light)
-            CardMemes(memeData: mainMenuOptions[0], width: 200.0)
-                .preferredColorScheme(.dark)
-        }
-        .previewInterfaceOrientation(.portrait)
-    }
-}
+//struct CardMemesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            CardMemes(memeData: mainMenuOptions[0], width: 200.0)
+//                .preferredColorScheme(.light)
+//            CardMemes(memeData: mainMenuOptions[0], width: 200.0)
+//                .preferredColorScheme(.dark)
+//        }
+//        .previewInterfaceOrientation(.portrait)
+//    }
+//}
