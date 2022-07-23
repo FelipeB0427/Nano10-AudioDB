@@ -14,7 +14,7 @@ struct AudioDBApp: App {
         WindowGroup {
             NavigationView {
 //            ContentView()
-                HomeView(mainMenuOptions: mainMenuOptions, categories: categoriesMemes)
+                HomeView()
                     .navigationTitle(Text("MemesDB"))
             }
             .navigationViewStyle(StackNavigationViewStyle())

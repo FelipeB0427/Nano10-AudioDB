@@ -10,15 +10,16 @@ import Combine
 
 class MemeManager: ObservableObject {
     @Published private(set) var memes: [Meme]
-    @Published private(set) var categories: [String]
+    @Published private(set) var categories: [MemeCategory]
     init() {
         self.memes = []
         self.categories = []
     }
-    init(memes: [Meme], categories: [String]) {
+    init(memes: [Meme], categories: [MemeCategory]) {
         self.memes = memes
         self.categories = categories
     }
+    // MARK: MEME
     func addMeme(meme: Meme) {
         if !memes.contains(meme) {
             meme.isFavorite = true
@@ -42,16 +43,6 @@ class MemeManager: ObservableObject {
             addMeme(meme: meme)
         }
     }
-    func addCategory(category: String) {
-        if !categories.contains(category) {
-            categories.append(category)
-        }
-    }
-    func addCategories(categories: [String]) {
-        for category in categories {
-            addCategory(category: category)
-        }
-    }
     func fetchAllMemes() async {
         let meemeURL = URL(string: Constants.memeGenerator.getAllMemes)!
         var memeGen: MemeGenerator!
@@ -62,5 +53,29 @@ class MemeManager: ObservableObject {
             print("TODO: handle errors")
         }
         self.addMeme(memes: memeGen.data.memes)
+        getAllCategories()
+    }
+    // MARK: CATEGORY
+    func getAllCategories() {
+        for meme in memes {
+            let cat = MemeCategory(id: "\(meme.boxCount)", isSelected: false)
+            if !categories.contains(cat) {
+                addCategory(category: cat)
+            }
+        }
+    }
+    func addCategory(category: MemeCategory) {
+        if !categories.contains(category) {
+            categories.append(category)
+        }
+    }
+    func addCategories(categories: [MemeCategory]) {
+        for category in categories {
+            addCategory(category: category)
+        }
+    }
+    // MARK: Deletions
+    func deleteAllCategories() {
+        categories = []
     }
 }

@@ -51,12 +51,20 @@ class Meme: Identifiable, Equatable {
     static func == (lhs: MemeJSON, rhs: Meme) -> Bool {
         lhs.id == rhs.id
     }
+    // MARK: Stub
+    static var memeStub = Meme(id: "181913649",
+                               isFavorite: false,
+                               imageURL: "https://i.imgflip.com/30b1gx.jpg",
+                               name: "Drake Hotline Bling",
+                               width: CGFloat(1200),
+                               height: CGFloat(1200),
+                               boxCount: 2)
 }
 
 /*
 "id": "181913649",
 "name": "Drake Hotline Bling",
-"url": "https://i.imgflip.com/30b1gx.jpg",
+"url": ,
 "width": 1200,
 "height": 1200,
 "box_count": 2

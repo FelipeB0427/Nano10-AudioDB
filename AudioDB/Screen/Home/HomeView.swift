@@ -9,9 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var memeManager: MemeManager
-    let mainMenuOptions: [MainMenuOptionsModel]
     
-    let categories: [MainMenuOptionsModel]
     private let width = Constants.sizes.screenWidth
     private let percentageForMainMenu = CGFloat(0.397196)
     private let percentageForLists = CGFloat(0.317757)
@@ -73,14 +71,14 @@ struct HomeView: View {
                     }
                     .padding(.top, Constants.sizes.mediumSpace)
                     .padding(.leading, Constants.sizes.mediumSpace)
-//                    ScrollView(.horizontal) {
-//                        HStack {
-//                            ForEach(categories, id: \.id) { cat in
-//                                CardMemes(memeData: cat, width: width * percentageForLists)
-//                            }
-//                        }
-//                    }
-//                    .accessibilityIdentifier("homeCategoriesList")
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(memeManager.categories, id: \.id) { cat in
+                                CardCategory(category: cat)
+                            }
+                        }
+                    }
+                    .accessibilityIdentifier("homeCategoriesList")
                 }
             }
             .onAppear {
@@ -93,7 +91,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(mainMenuOptions: favoritesMemes, categories: categoriesMemes)
+        HomeView()
             .preferredColorScheme(.light)
     }
 }

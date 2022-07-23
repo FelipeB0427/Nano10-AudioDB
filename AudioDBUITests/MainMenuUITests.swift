@@ -11,11 +11,11 @@ import SwiftUI
 @testable import AudioDB
 class HomeUITests: XCTestCase {
     var app: XCUIApplication!
-//    var device: XCUIDevice!
+    var device: XCUIDevice!
     override func setUpWithError() throws {
         app = XCUIApplication()
-//        device = XCUIDevice.shared
-//        device.orientation = .portrait
+        device = XCUIDevice.shared
+        device.orientation = .portrait
         continueAfterFailure = false
         app.launch()
         print(app as Any)
