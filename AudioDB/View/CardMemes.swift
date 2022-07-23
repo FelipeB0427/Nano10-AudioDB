@@ -12,30 +12,35 @@ struct CardMemes: View {
     let width: CGFloat
     var body: some View {
         ZStack {
-        RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
-            .accessibilityIdentifier("\(memeData.id)Background")
-            .foregroundColor(.black)
-            .frame(minWidth: width * 0.5, maxWidth: width, minHeight: width * 0.5, maxHeight: width)
-        LazyVStack {
-            // Image
+            RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
+                .accessibilityIdentifier("\(memeData.id)Background")
+                .foregroundColor(.black)
+                .frame(width: width, height: width * Constants.sizes.proportionHeightForCards)
+            VStack {
+                // Image
                 AsyncImage(url: memeData.url,
-                            content: { image in
-                                image.resizable()
-                                     .aspectRatio(contentMode: .fit)
-                                     .frame(width: width, height: width)
-                            },
-                            placeholder: {
-                                ProgressView()
-                            }
-                    )
-                    .accessibilityIdentifier("\(memeData.id)Emoji")
+                           content: { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: width, maxHeight: width * 0.75)
+                },
+                           placeholder: {
+                    ProgressView()
+                })
+                .accessibilityIdentifier("\(memeData.id)Emoji")
+                // Label for the Card
+                Text(memeData.name)
+                    .multilineTextAlignment(.center)
+                    .accessibilityIdentifier("\(memeData.id)Label")
+                    .foregroundColor(.white)
+                    .font(Constants.texts.bodyText)
+                    .lineLimit(2)
+                    .frame(maxWidth: width * 0.8, maxHeight: width * 0.25)
+                Spacer()
             }
-            // Label for the Card
-//            Text(memeData.name)
-//                .accessibilityIdentifier("\(memeData.id)Label")
-//                .foregroundColor(.white)
-//                .font(Constants.texts.secondaryText)
-        }.overlay(
+        }
+        .clipShape(RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius))
+        .overlay(
             RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius)
                 .stroke(Color.primaryColor, lineWidth: Constants.sizes.linedWidth)
         )
