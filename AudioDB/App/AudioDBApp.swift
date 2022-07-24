@@ -31,7 +31,7 @@ struct AudioDBApp: App {
                     HomeView()
                         .navigationTitle(Text("MemesDB"))
                 case .listMemes:
-                    ListMemesView()
+                    ListMemesView(memes: [Meme.memeStub, Meme.memeStub])
                 case .detailMeme:
                     // TODO: MAKE THIS VIEW
 //                    DetailMemeView()

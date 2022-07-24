@@ -34,6 +34,7 @@
 		6FBCEB45288CB29B0071346D /* ListMemesViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB44288CB29B0071346D /* ListMemesViewUITest.swift */; };
 		6FBCEB48288CB35A0071346D /* ListMemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB47288CB35A0071346D /* ListMemesView.swift */; };
 		6FBCEB4A288CBF720071346D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB49288CBF720071346D /* Enums.swift */; };
+		6FBCEB4C288D7D5F0071346D /* ListMemesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB4B288D7D5E0071346D /* ListMemesCellView.swift */; };
 		6FD0F497288ACD9300145C8E /* CarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD0F496288ACD9300145C8E /* CarMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		6FBCEB44288CB29B0071346D /* ListMemesViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesViewUITest.swift; sourceTree = "<group>"; };
 		6FBCEB47288CB35A0071346D /* ListMemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesView.swift; sourceTree = "<group>"; };
 		6FBCEB49288CBF720071346D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		6FBCEB4B288D7D5E0071346D /* ListMemesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesCellView.swift; sourceTree = "<group>"; };
 		6FD0F496288ACD9300145C8E /* CarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				6FBCEB47288CB35A0071346D /* ListMemesView.swift */,
+				6FBCEB4B288D7D5E0071346D /* ListMemesCellView.swift */,
 			);
 			path = ListMemes;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				6FBCEB3F288C93880071346D /* MemeCategory.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
 				6FBCEB4A288CBF720071346D /* Enums.swift in Sources */,
+				6FBCEB4C288D7D5F0071346D /* ListMemesCellView.swift in Sources */,
 				6FBCEB48288CB35A0071346D /* ListMemesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

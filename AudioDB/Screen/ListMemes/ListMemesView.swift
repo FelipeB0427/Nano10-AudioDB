@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ListMemesView: View {
+    let memes: [Meme]
     var body: some View {
-        Text("List Of MEMES")
-            .accessibilityIdentifier("ListMemesView-title")
+        VStack{
+            Text("List Of MEMES")
+                .accessibilityIdentifier("ListMemesView-title")
+            List() {
+                ForEach(memes) { meme in
+                    ListMemesCellView(meme: meme)
+                }
+            }
+            .accessibilityIdentifier("ListMemesView-List")
+        }
     }
 }
 
 struct ListMemesView_Previews: PreviewProvider {
     static var previews: some View {
-        ListMemesView()
+        ListMemesView(memes: [Meme.memeStub, Meme.memeStub, Meme.memeStub,
+                              Meme.memeStub, Meme.memeStub, Meme.memeStub,
+                              Meme.memeStub, Meme.memeStub, Meme.memeStub,
+                              Meme.memeStub, Meme.memeStub, Meme.memeStub])
     }
 }

@@ -23,13 +23,13 @@ struct HomeView: View {
                         .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
                         Spacer()
-                        NavigationLink(destination: ListMemesView().accessibilityIdentifier("HomeView-titleListView")) {
+                        NavigationLink(destination: ListMemesView(memes: memeManager.memes).accessibilityIdentifier("HomeView-titleListView")) {
                             CarMenu(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonMemes")
                         Spacer()
-                        NavigationLink(destination: ListMemesView().accessibilityIdentifier("HomeView-titleListView2")) {
+                        NavigationLink(destination: ListMemesView(memes: memeManager.memes).accessibilityIdentifier("HomeView-titleListView2")) {
                             CarMenu(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
