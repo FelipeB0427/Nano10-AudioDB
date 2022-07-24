@@ -47,7 +47,7 @@ struct CardMemes: View {
     }
 }
 
-//struct CardMemesView_Previews: PreviewProvider {
+// struct CardMemesView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        Group {
 //            CardMemes(memeData: mainMenuOptions[0], width: 200.0)
@@ -57,4 +57,4 @@ struct CardMemes: View {
 //        }
 //        .previewInterfaceOrientation(.portrait)
 //    }
-//}
+// }

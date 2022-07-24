@@ -28,10 +28,12 @@
 		6F99D0AF2889CDA700858A4D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0AE2889CDA700858A4D /* Contants.swift */; };
 		6F99D0B12889CE8600858A4D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F99D0B02889CE8600858A4D /* Color+Extension.swift */; };
 		6FBCEB3B288C2EF30071346D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB3A288C2EF30071346D /* String+Extension.swift */; };
-		6FBCEB3D288C91140071346D /* ListMemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB3C288C91140071346D /* ListMemesView.swift */; };
 		6FBCEB3F288C93880071346D /* MemeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB3E288C93880071346D /* MemeCategory.swift */; };
 		6FBCEB41288C93B00071346D /* CategoryMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB40288C93B00071346D /* CategoryMemeTests.swift */; };
 		6FBCEB43288CA6100071346D /* CardCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB42288CA6100071346D /* CardCategory.swift */; };
+		6FBCEB45288CB29B0071346D /* ListMemesViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB44288CB29B0071346D /* ListMemesViewUITest.swift */; };
+		6FBCEB48288CB35A0071346D /* ListMemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB47288CB35A0071346D /* ListMemesView.swift */; };
+		6FBCEB4A288CBF720071346D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCEB49288CBF720071346D /* Enums.swift */; };
 		6FD0F497288ACD9300145C8E /* CarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD0F496288ACD9300145C8E /* CarMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,10 +80,12 @@
 		6F99D0AE2889CDA700858A4D /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		6F99D0B02889CE8600858A4D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		6FBCEB3A288C2EF30071346D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		6FBCEB3C288C91140071346D /* ListMemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesView.swift; sourceTree = "<group>"; };
 		6FBCEB3E288C93880071346D /* MemeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCategory.swift; sourceTree = "<group>"; };
 		6FBCEB40288C93B00071346D /* CategoryMemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMemeTests.swift; sourceTree = "<group>"; };
 		6FBCEB42288CA6100071346D /* CardCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategory.swift; sourceTree = "<group>"; };
+		6FBCEB44288CB29B0071346D /* ListMemesViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesViewUITest.swift; sourceTree = "<group>"; };
+		6FBCEB47288CB35A0071346D /* ListMemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemesView.swift; sourceTree = "<group>"; };
+		6FBCEB49288CBF720071346D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		6FD0F496288ACD9300145C8E /* CarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,9 +138,9 @@
 		1533C7A32885E29A00053A0B /* AudioDB */ = {
 			isa = PBXGroup;
 			children = (
+				1533C7D628887CBE00053A0B /* App */,
 				6F40E685288BA072005F2E55 /* Services */,
 				1533C7D928887FF300053A0B /* Model */,
-				1533C7D628887CBE00053A0B /* App */,
 				1533C7D528887A8C00053A0B /* Utilities */,
 				1533C7D328887A5B00053A0B /* Screen */,
 				1533C7D128887A4C00053A0B /* ViewModel */,
@@ -171,7 +175,7 @@
 				1533C7C12885E29D00053A0B /* AudioDBUITestsLaunchTests.swift */,
 				6F99D0A02888B43300858A4D /* MainMenuUITests.swift */,
 				6F8E89D7288A410200C5697C /* CardfyUITests.swift */,
-				6FBCEB3C288C91140071346D /* ListMemesView.swift */,
+				6FBCEB44288CB29B0071346D /* ListMemesViewUITest.swift */,
 			);
 			path = AudioDBUITests;
 			sourceTree = "<group>";
@@ -197,6 +201,7 @@
 		1533C7D328887A5B00053A0B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6FBCEB46288CB3470071346D /* ListMemes */,
 				669E622A28887F0900C32613 /* ContentView.swift */,
 				6F99D09F2888B3DB00858A4D /* Home */,
 			);
@@ -210,6 +215,7 @@
 				6F99D0AE2889CDA700858A4D /* Contants.swift */,
 				6F99D0B02889CE8600858A4D /* Color+Extension.swift */,
 				6FBCEB3A288C2EF30071346D /* String+Extension.swift */,
+				6FBCEB49288CBF720071346D /* Enums.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -272,6 +278,14 @@
 				6F99D0A22888B69F00858A4D /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		6FBCEB46288CB3470071346D /* ListMemes */ = {
+			isa = PBXGroup;
+			children = (
+				6FBCEB47288CB35A0071346D /* ListMemesView.swift */,
+			);
+			path = ListMemes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +454,8 @@
 				6F99D0AD2889C8C300858A4D /* CardMemes.swift in Sources */,
 				6FBCEB3F288C93880071346D /* MemeCategory.swift in Sources */,
 				1533C7A52885E29A00053A0B /* AudioDBApp.swift in Sources */,
+				6FBCEB4A288CBF720071346D /* Enums.swift in Sources */,
+				6FBCEB48288CB35A0071346D /* ListMemesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FBCEB3D288C91140071346D /* ListMemesView.swift in Sources */,
+				6FBCEB45288CB29B0071346D /* ListMemesViewUITest.swift in Sources */,
 				1533C7C22885E29D00053A0B /* AudioDBUITestsLaunchTests.swift in Sources */,
 				6F99D0A12888B43300858A4D /* MainMenuUITests.swift in Sources */,
 				6F8E89D8288A410200C5697C /* CardfyUITests.swift in Sources */,

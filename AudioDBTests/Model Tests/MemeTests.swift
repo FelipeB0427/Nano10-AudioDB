@@ -39,7 +39,6 @@ class MemeTests: XCTestCase {
         // GIVEN
         let isFavorite = true
         let url = URL(string: "https://www.google.com.br/images/branding/googlelogo/2x/1googlelogo_color_272x92dp.png")!
-        let title = "Google1"
         let meme = Meme(id: "213123423",
                         isFavorite: isFavorite,
                         imageURL: url,

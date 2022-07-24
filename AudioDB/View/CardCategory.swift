@@ -22,7 +22,8 @@ struct CardCategory: View {
                 .foregroundColor(.white)
                 .font(Constants.texts.bodyText)
                 .lineLimit(1)
-//                .scaledToFit()
+                .padding([.top, .bottom], Constants.sizes.largeSpace)
+                .padding([.leading, .trailing], Constants.sizes.largeSpace * 4)
         }
         .clipShape(RoundedRectangle(cornerRadius: Constants.sizes.cornerRadius))
         .overlay(

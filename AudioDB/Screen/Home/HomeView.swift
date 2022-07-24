@@ -8,22 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var memeManager: MemeManager
-    
+    @EnvironmentObject var memeManager: MemeManager  
     private let width = Constants.sizes.screenWidth
     private let percentageForMainMenu = CGFloat(0.397196)
     private let percentageForLists = CGFloat(0.317757)
     var body: some View {
             ScrollView(.vertical) {
                 VStack {
-                    // MARK: Welcome
-//                    HStack {
-//                        Text("Hello, there!")
-//                            .accessibilityIdentifier("welcome")
-//                            .font(.system(.title, design: .rounded))
-//                        Spacer()
-//                    }
-//                    .background(.red)
                     // MARK: Choose
                     Text("Choose what you want to do now:")
                         .accessibilityIdentifier("textChoose")
@@ -32,13 +23,13 @@ struct HomeView: View {
                         .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
                         Spacer()
-                        NavigationLink(destination: Text("titleListView").accessibilityIdentifier("titleListView")) {
+                        NavigationLink(destination: ListMemesView().accessibilityIdentifier("HomeView-titleListView")) {
                             CarMenu(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonMemes")
                         Spacer()
-                        NavigationLink(destination: Text("titleListView")) {
+                        NavigationLink(destination: ListMemesView().accessibilityIdentifier("HomeView-titleListView2")) {
                             CarMenu(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
@@ -80,6 +71,7 @@ struct HomeView: View {
                     }
                     .accessibilityIdentifier("homeCategoriesList")
                 }
+                .padding()
             }
             .onAppear {
                 Task { await memeManager.fetchAllMemes() }

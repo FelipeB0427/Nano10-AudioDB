@@ -63,6 +63,7 @@ class MemeManager: ObservableObject {
                 addCategory(category: cat)
             }
         }
+        categories = categories.sorted(by: { $0.id < $1.id })
     }
     func addCategory(category: MemeCategory) {
         if !categories.contains(category) {

@@ -84,7 +84,6 @@ class MemeManagerTests: XCTestCase {
         XCTAssertTrue(sut.categories.count > 0)
     }
     // MARK: Deletions
-    
     func testGetCategories() {
         // GIVEN
         let cat1 = MemeCategory(id: "1", isSelected: true)
