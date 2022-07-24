@@ -9,30 +9,29 @@ import XCTest
 
 @testable import AudioDB
 class MemeTests: XCTestCase {
-
+    var meme: Meme!
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        meme = Meme(id: memeStub.id,
+                        isFavorite: memeStub.isFavorite,
+                        imageURL: memeStub.url,
+                        name: memeStub.name,
+                        width: memeStub.width,
+                        height: memeStub.height,
+                        boxCount: memeStub.boxCount)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        meme = nil
     }
 
     func testInit() {
-        // WHEN
-        let meme = Meme(isFavorite: memeStub.isFavorite,
-                    imageURL: memeStub.imageURL,
-                    title: memeStub.title)
         // THEN
         XCTAssertNotNil(meme, "The class couldn't be initialized.")
         XCTAssertEqual(meme.isFavorite, memeStub.isFavorite, "")
-        XCTAssertEqual(meme.imageURL, memeStub.imageURL, "")
-        XCTAssertEqual(meme.title, memeStub.title, "")
+        XCTAssertEqual(meme.url, memeStub.url, "")
+        XCTAssertEqual(meme.name, memeStub.name, "")
     }
     func testEquatable_ReturnsTrue() {
-        let meme = Meme(isFavorite: memeStub.isFavorite,
-                         imageURL: memeStub.imageURL,
-                         title: memeStub.title)
         // THEN
         XCTAssertEqual(memeStub, meme)
     }
@@ -40,10 +39,13 @@ class MemeTests: XCTestCase {
         // GIVEN
         let isFavorite = true
         let url = URL(string: "https://www.google.com.br/images/branding/googlelogo/2x/1googlelogo_color_272x92dp.png")!
-        let title = "Google1"
-        let meme = Meme(isFavorite: isFavorite,
-                         imageURL: url,
-                         title: title)
+        let meme = Meme(id: "213123423",
+                        isFavorite: isFavorite,
+                        imageURL: url,
+                        name: "blabla",
+                        width: 1000,
+                        height: 1000,
+                        boxCount: 2)
         // THEN
         XCTAssertNotEqual(meme, memeStub)
     }

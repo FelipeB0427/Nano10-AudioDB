@@ -8,23 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    let mainMenuOptions: [MainMenuOptionsModel]
-    let favorites: [MainMenuOptionsModel]
-    let categories: [MainMenuOptionsModel]
+    @EnvironmentObject var memeManager: MemeManager  
     private let width = Constants.sizes.screenWidth
     private let percentageForMainMenu = CGFloat(0.397196)
     private let percentageForLists = CGFloat(0.317757)
     var body: some View {
             ScrollView(.vertical) {
                 VStack {
-                    // MARK: Welcome
-//                    HStack {
-//                        Text("Hello, there!")
-//                            .accessibilityIdentifier("welcome")
-//                            .font(.system(.title, design: .rounded))
-//                        Spacer()
-//                    }
-//                    .background(.red)
                     // MARK: Choose
                     Text("Choose what you want to do now:")
                         .accessibilityIdentifier("textChoose")
@@ -33,14 +23,14 @@ struct HomeView: View {
                         .padding(.leading, Constants.sizes.mediumSpace)
                     HStack {
                         Spacer()
-                        NavigationLink(destination: Text("titleListView").accessibilityIdentifier("titleListView")) {
-                            Cardfy(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
+                        NavigationLink(destination: ListMemesView(memes: memeManager.memes).accessibilityIdentifier("HomeView-titleListView")) {
+                            CarMenu(memeData: mainMenuOptions[0], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonMemes")
                         Spacer()
-                        NavigationLink(destination: Text("titleListView")) {
-                            Cardfy(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
+                        NavigationLink(destination: ListMemesView(memes: memeManager.memes).accessibilityIdentifier("HomeView-titleListView2")) {
+                            CarMenu(memeData: mainMenuOptions[1], width: width * percentageForMainMenu)
                             .font(.largeTitle)
                         }
                         .accessibilityIdentifier("navButtonGenerate")
@@ -57,8 +47,8 @@ struct HomeView: View {
                     .padding(.leading, Constants.sizes.mediumSpace)
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(favorites, id: \.id) { fav in
-                                Cardfy(memeData: fav, width: width * percentageForLists)
+                            ForEach(memeManager.memes, id: \.id) { fav in
+                                CardMemes(memeData: fav, width: width * percentageForLists)
                             }
                         }
                     }
@@ -74,13 +64,17 @@ struct HomeView: View {
                     .padding(.leading, Constants.sizes.mediumSpace)
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(categories, id: \.id) { cat in
-                                Cardfy(memeData: cat, width: width * percentageForLists)
+                            ForEach(memeManager.categories, id: \.id) { cat in
+                                CardCategory(category: cat)
                             }
                         }
                     }
                     .accessibilityIdentifier("homeCategoriesList")
                 }
+                .padding()
+            }
+            .onAppear {
+                Task { await memeManager.fetchAllMemes() }
             }
             .background(Color.backgroundColor)
             .background(Color.textColor)
@@ -89,7 +83,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(mainMenuOptions: favoritesMemes, favorites: mainMenuOptions, categories: categoriesMemes)
+        HomeView()
             .preferredColorScheme(.light)
     }
 }

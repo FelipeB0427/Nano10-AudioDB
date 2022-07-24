@@ -31,4 +31,8 @@ struct Constants {
         let secondaryText = Font.system(.title, design: .rounded)
         let bodyText = Font.system(.body, design: .rounded)
     }
+    static let memeGenerator = ConstantsMemeGenerator()
+    struct ConstantsMemeGenerator {
+        let getAllMemes = "https://api.imgflip.com/get_memes"
+    }
 }
